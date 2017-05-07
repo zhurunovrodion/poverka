@@ -16,11 +16,13 @@
 		<script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
 		<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		
+
+		<script type="text/javascript" src="js/modal.js"></script>
 
 		
 	</head>
 	<body>
+	<div class="container-fluid">
 		<div id="wrapper">
 			<div id="header">
 				<div id="logo">
@@ -70,6 +72,6 @@
 			
 		<script type='text/javascript' src='js/validator/dist/jquery.validate.js'></script>
 		<script type='text/javascript' src='js/form.validate.js'></script>
-		
+	</div>	
 	</body>
 </html>

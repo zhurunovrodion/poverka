@@ -1,5 +1,4 @@
 <script type="text/javascript" src="js/editposts_edit.js"></script>
-
 <div class="header-title">
 <h1>Добавление/редактирование постов</h1>
 </div>

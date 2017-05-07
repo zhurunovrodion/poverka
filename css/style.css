@@ -911,3 +911,22 @@ select option:hover{
 .success-removing{
   background-color: rgba(7, 241, 81, 0.71);
 }
+
+.modal-dialog.in{
+  padding-right: 17px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 50%;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999;      
+  transform: translateY(-50%);
+}
+
+.modal-dialog.in .modal-content{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
