@@ -58,6 +58,11 @@ class Model_Editposts extends Model
 		
 	}
 	
-		
+	public function update_post($number, $name, $address, $id){
+		$this->db=new SafeMySQL();
+		$sql="UPDATE posts SET post_number=?i, post_name=?s, post_address=?s WHERE post_id=?i";
+		$this->db->query($sql, $number, $name, $address , $id);
+		return $value; 
+	}	
 }
 

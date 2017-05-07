@@ -61,13 +61,14 @@ $(document).ready(function(){
 					name: 'Адресс'
 				}],
 				submit: function(data){
-					sendDataToServer(data);
+					data.id = id;
+					callPostUpdate(data);
 				}
 			});
 		});
 	}
 
-	function sendDataToServer(data){
+	function callPostUpdate(data){
 		$.ajax({
 			type: 'POST',
 			url: '/editposts/updatepost',

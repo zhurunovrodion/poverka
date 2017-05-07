@@ -43,7 +43,7 @@
 				for(var i=0; i<this.fields.length; i++){
 					var field = this.fields[i];
 					var $inputContainer = $('<div>');
-					var $label = $('<label>').text(field.name);
+					var $label = $('<label>').text(field.name); //set label text.
 					var $input = $('<input type="text">')
 									.attr('id', field.id)
 									.val(field.value);
@@ -64,13 +64,13 @@
 	    		var $target = $(e.currentTarget);
 	    		var $dialog = $target.closest('.modal-dialog');
 	    		var $inputs = $dialog.find('input');
-    			var result = [];
+    			var result = {};
 
     			$inputs.each(function(item){
     				var $elem = $(this);
     				var id = $elem.attr('id');
-    				    
-    				result[id] = $elem.val();
+
+    				result[id] = $elem.val(); //get value from input
     			});
 
     			this.options.submit(result);
