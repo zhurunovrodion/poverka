@@ -30,6 +30,8 @@
 		        var $okButton = $('<button class="btn btn-success">Сохранить</button>');
 	            var $cancelButton = $('<button class="btn btn-danger">Отмена</button>');
 
+	            this.$dialog = $dialog;
+
 	        	$content.append($header)
 	        			.append($body)
 	        			.append($footer);	        			
@@ -52,9 +54,33 @@
 					$form.append($inputContainer);
 				}
 
+				$okButton.on('click', $.proxy(this.okButtonClick, this));
+				$cancelButton.on('click', $.proxy(this.cancelButtonClick, this));
+
 				$dialog.modal('show');
 		    };
 		   
+	    	InputModal.prototype.okButtonClick = function(e){
+	    		var $target = $(e.currentTarget);
+	    		var $dialog = $target.closest('.modal-dialog');
+	    		var $inputs = $dialog.find('input');
+    			var result = [];
+
+    			$inputs.each(function(item){
+    				var $elem = $(this);
+    				result.push({
+    					id: $elem.attr('id'),
+    					value: $elem.val()
+    				});
+    			});
+
+    			this.options.submit(result);
+	    	}
+
+			InputModal.prototype.cancelButtonClick = function(){
+ 				this.$dialog.modal('hide');
+			} 
+
 		    $[pluginName] = function ( options ) {
 		        var inputModal = new InputModal(options);
 		        inputModal.init();
