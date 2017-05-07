@@ -8,13 +8,14 @@
 		<title>Система поверок</title>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 		<link href="http://fonts.googleapis.com/css?family=Kreon" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
-		
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
 		<script type='text/javascript' src='js/validator/lib/jquery.js'></script>
 		<script type="text/javascript" src="js/jquery-ui-1.8.custom.min.js"></script>
 		<script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
 		<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
-		
+		<script src="js/bootstrap.min.js"></script>
 		
 
 		

@@ -14,13 +14,15 @@ $(document).ready(function(){
 
 			if(confirm('Точно удалить?')){						
 				var ajaxData = {post_id: id};
-				
+
 				$.ajax({
 					type: 'POST',
 					url: '/editposts/deletepost',
 					data: ajaxData,
 					success: function(response){
-						$tr.remove();
+						$tr.fadeOut(400, function(){
+							$tr.remove();
+						});						
 					},
 					error: function(response){
 						alert('ajax error');
