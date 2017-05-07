@@ -68,10 +68,9 @@
 
     			$inputs.each(function(item){
     				var $elem = $(this);
-    				result.push({
-    					id: $elem.attr('id'),
-    					value: $elem.val()
-    				});
+    				var id = $elem.attr('id');
+    				    
+    				result[id] = $elem.val();
     			});
 
     			this.options.submit(result);
@@ -87,23 +86,3 @@
 		    }
 
 })( jQuery, window, document );
-/*
-$.inputModal({	
-	fields: [{
-		'id': 'post1' ,
-		'value': 'lalal',
-		'type': 'text/select'
-	}, {
-	
-	}],
-	validate:{
-		...
-	},
-	success: function(data){
-		//send data to server
-	}
-});
-
-
-
-*/

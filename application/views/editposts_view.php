@@ -43,7 +43,7 @@ foreach ($data[0] as $locations) {
 		foreach($data[1] as $posts){
 			foreach($data[2] as $location_post_consistency){
 				if(($location_post_consistency['location_post_consistency_location_id']==$locations['location_id']) and ($location_post_consistency['location_post_consistency_post_id']==$posts['post_id']))
-					echo '<tr class="dogreybg" data-id="'.$posts['post_id'].'" align="center"><td>'.$posts['post_id'].'</td><td>'.$posts['post_number'].'</td><td>'.$posts['post_name'].'</td><td>'.$posts['post_address'].'</td><td><button>Редактировать</button><button class="remove-button">Удалить</button></td></tr>';
+					echo '<tr class="dogreybg" data-id="'.$posts['post_id'].'" align="center"><td>'.$posts['post_id'].'</td><td data-post-number="'.$posts['post_number'].'">'.$posts['post_number'].'</td><td data-post-name="'.$posts['post_name'].'">'.$posts['post_name'].'</td><td data-post-address="'.$posts['post_address'].'">'.$posts['post_address'].'</td><td><button class="edit-button">Редактировать</button><button class="remove-button">Удалить</button></td></tr>';
 					
 		}
 	}
