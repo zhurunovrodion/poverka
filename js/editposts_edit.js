@@ -20,6 +20,7 @@ $(document).ready(function(){
 					url: '/editposts/deletepost',
 					data: ajaxData,
 					success: function(response){
+						$tr.addClass('success-removing');
 						$tr.fadeOut(400, function(){
 							$tr.remove();
 						});						

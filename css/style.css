@@ -907,3 +907,7 @@ select option:hover{
 }
 /* Стили select начало конец */	
 /*---------Стиль формы ввода постов конец-----------*/
+
+.success-removing{
+  background-color: rgba(7, 241, 81, 0.71);
+}
