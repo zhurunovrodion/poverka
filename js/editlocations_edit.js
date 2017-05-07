@@ -52,7 +52,7 @@ function removeLi() {
 			//отправляем запрос
 			$.post('/editlocations/deletelocation', {'id':noteId},function(data) {
 				
-				var response = eval('('+data+')');
+				var response = JSON.parse(data);
 				
 				if (response['err'] != null) {
 					alert(response['err']);
