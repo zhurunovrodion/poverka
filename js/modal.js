@@ -27,18 +27,21 @@
 		        var $footer = $('<div class="modal-footer">');
 		        var $form = $('<form>');		        
 		        var $dialog = $('<div class="modal-dialog">');
+		        var $okButton = $('<button class="btn btn-success">Сохранить</button>');
+	            var $cancelButton = $('<button class="btn btn-danger">Отмена</button>');
 
 	        	$content.append($header)
 	        			.append($body)
 	        			.append($footer);	        			
 		        $dialog.append($content);
-
+	        	$footer.append($okButton)
+	        			.append($cancelButton)
 		        $body.append($form);
 
 				for(var i=0; i<this.fields.length; i++){
 					var field = this.fields[i];
 					var $inputContainer = $('<div>');
-					var $label = $('<label>');
+					var $label = $('<label>').text(field.name);
 					var $input = $('<input type="text">')
 									.attr('id', field.id)
 									.val(field.value);
