@@ -12,18 +12,25 @@ $(document).ready(function(){
 			var $tr = $element.closest('tr');
 			var id = $tr.attr('data-id');
 
-			var ajaxData = {post_id: id};
-			$.ajax({
-				type: 'POST',
-				url: '/editposts/deletepost',
-				data: ajaxData,
-				success: function(response){
-					$tr.remove();
-				},
-				error: function(response){
-					alert('ajax error');
-				}
-			});
+			if(confirm('Точно удалить?')){						
+				var ajaxData = {post_id: id};
+				
+				$.ajax({
+					type: 'POST',
+					url: '/editposts/deletepost',
+					data: ajaxData,
+					success: function(response){
+						$tr.remove();
+					},
+					error: function(response){
+						alert('ajax error');
+					}
+				});
+			}
 		});
+	}
+
+	function initEditButtons(){
+
 	}
 });
