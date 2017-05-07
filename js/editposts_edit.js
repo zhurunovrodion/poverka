@@ -74,12 +74,27 @@ $(document).ready(function(){
 			url: '/editposts/updatepost',
 			data: data,
 			success: function(response){
-				console.log('success');
-			},
-			error: function(response){
-				alert('ajax error');
+				if(response !== 'success'){
+					alert('ajax error');
+					return;
+				}
+
+				updateRow(data);
 			}
 		});
+	}
+
+	function updateRow(data){
+		var $tr = $('tr[data-id="'+data.id+'"]');
+		$tr.find('[data-post-number]')
+			.attr('data-post-number', data.number)
+			.text(data.number);
+		$tr.find('[data-post-name]')
+			.attr('data-post-name', data.name)
+			.text(data.name);
+		$tr.find('[data-post-address]')
+			.attr('data-post-address', data.address)
+			.text(data.address);
 	}
 });
 

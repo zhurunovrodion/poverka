@@ -74,6 +74,7 @@
     			});
 
     			this.options.submit(result);
+    			this.$dialog.modal('hide');
 	    	}
 
 			InputModal.prototype.cancelButtonClick = function(){
