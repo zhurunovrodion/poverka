@@ -95,6 +95,14 @@ $(document).ready(function(){
 		$tr.find('[data-post-address]')
 			.attr('data-post-address', data.address)
 			.text(data.address);
+
+		$tr.hide();
+		$tr.addClass('success-updating');
+		$tr.fadeIn(1000, function(){
+			setTimeout(function(){
+				$tr.removeClass('success-updating');
+			}, 500)
+		});
 	}
 });
 
