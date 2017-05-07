@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 			$.ajax({
 				type: 'POST',
-				url: '/editpost/deletepost',
+				url: '/editposts/deletepost',
 				data: {post_id: id},
 				success: function(response){
 					$tr.remove();

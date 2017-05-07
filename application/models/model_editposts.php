@@ -45,7 +45,18 @@ class Model_Editposts extends Model
 		$sql="INSERT INTO location_post_consistency(location_post_consistency_location_id,location_post_consistency_post_id) VALUES(?i,?i)";
 		$this->db->query($sql, $location_id , $post_id);
 	}
-	
+	public function delete_post($data){
+		$this->db=new SafeMySQL();
+		
+		$sql="DELETE FROM posts WHERE post_id=?i";
+		$this->db->query($sql, $data); 
+		$sql="DELETE FROM location_post_consistency WHERE location_post_consistency_post_id=?i";
+		$this->db->query($sql, $data);   
+		$result = array(); 
+		
+		echo "success";
+		
+	}
 	
 		
 }

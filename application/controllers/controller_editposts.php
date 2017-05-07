@@ -21,4 +21,20 @@ class Controller_Editposts extends Controller
 		header('Location: http://localhost/editposts');
 		
 	}
+	function action_deletepost(){
+		try {
+			$data=$_POST['post_id'];
+
+		    if (!isset($data)) {
+		        throw new Exception('Не указан id записи');
+		    }
+		    
+   		 
+         $result=$this->model->delete_post($data);
+		 //echo $result;   
+		    
+		} catch(Exception $e) {
+		    echo json_encode(array('err'=>'Ошибка: '.$e->getMessage()));
+		}
+   	}
 }
