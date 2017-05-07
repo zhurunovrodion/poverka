@@ -12,10 +12,11 @@ $(document).ready(function(){
 			var $tr = $element.closest('tr');
 			var id = $tr.attr('data-id');
 
+			var ajaxData = {post_id: id};
 			$.ajax({
 				type: 'POST',
 				url: '/editposts/deletepost',
-				data: {post_id: id},
+				data: ajaxData,
 				success: function(response){
 					$tr.remove();
 				},
