@@ -35,7 +35,8 @@
 	        	$content.append($header)
 	        			.append($body)
 	        			.append($footer);	        			
-		        $dialog.append($content);
+		        $dialog.append($content)
+		        		.addClass(this.options.windowClass);
 	        	$footer.append($okButton)
 	        			.append($cancelButton)
 		        $body.append($form);

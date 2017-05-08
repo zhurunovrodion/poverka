@@ -88,6 +88,7 @@ $(document).ready(function(){
 					value: address,
 					name: 'Адресс'
 				}],
+				windowClass: 'edit-posts-modal',
 				validator: validator,
 				submit: function(data){
 					data.id = id;
