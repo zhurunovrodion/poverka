@@ -44,6 +44,34 @@ $(document).ready(function(){
 			var name = $tr.find('[data-post-name]').attr('data-post-name');
 			var address = $tr.find('[data-post-address]').attr('data-post-address');
 
+			var validator = {
+				rules: {
+				 	number: {
+				 		required: true,
+				 		digits: true
+				 	},
+				 	name: {
+				 		required: true
+				 	},
+				 	address: {
+				 		required: true
+				 	}
+				 },
+				 messages: {
+				 	number: {
+				 		required: "Обязательно для заполнения!",
+				 		digits: "Должно содержать только цифры!"
+				 	},
+				 	name: {
+				 		required: "Обязательно для заполнения!"
+				 		
+				 	},
+				 	address: {
+				 		required: "Обязательно для заполнения!"				 		
+				 	}
+				}
+			}
+
 			$.inputModal({
 				fields: [{
 					id: 'number',
@@ -60,6 +88,7 @@ $(document).ready(function(){
 					value: address,
 					name: 'Адресс'
 				}],
+				validator: validator,
 				submit: function(data){
 					data.id = id;
 					callPostUpdate(data);

@@ -25,9 +25,9 @@
 		        var $content = $('<div class="modal-content">');
 		        var $body = $('<div class="modal-body">');
 		        var $footer = $('<div class="modal-footer">');
-		        var $form = $('<form>');		        
+		        var $form = $('<form id="modal-form">');		        
 		        var $dialog = $('<div class="modal-dialog">');
-		        var $okButton = $('<button class="btn btn-success">Сохранить</button>');
+		        var $okButton = $('<button type="submit" class="btn btn-success">Сохранить</button>');
 	            var $cancelButton = $('<button class="btn btn-danger">Отмена</button>');
 
 	            this.$dialog = $dialog;
@@ -46,6 +46,7 @@
 					var $label = $('<label>').text(field.name); //set label text.
 					var $input = $('<input type="text">')
 									.attr('id', field.id)
+									.attr('name', field.id)
 									.val(field.value);
 
 					$inputContainer.append($label)
@@ -57,10 +58,23 @@
 				$okButton.on('click', $.proxy(this.okButtonClick, this));
 				$cancelButton.on('click', $.proxy(this.cancelButtonClick, this));
 
+				this.applyValidation();
 				$dialog.modal('show');
 		    };
 		   
+			InputModal.prototype.applyValidation = function(){
+				var $form = this.$dialog.find('form');
+				if(this.options.validator){
+					$form.validate(this.options.validator);
+				}				
+			}
+
 	    	InputModal.prototype.okButtonClick = function(e){
+	    		var $form = this.$dialog.find('form');
+	    		if(!$form.valid()){
+	    			return;
+	    		}
+
 	    		var $target = $(e.currentTarget);
 	    		var $dialog = $target.closest('.modal-dialog');
 	    		var $inputs = $dialog.find('input');
@@ -75,10 +89,12 @@
 
     			this.options.submit(result);
     			this.$dialog.modal('hide');
+    			this.$dialog.remove();
 	    	}
 
 			InputModal.prototype.cancelButtonClick = function(){
  				this.$dialog.modal('hide');
+ 				this.$dialog.remove();
 			} 
 
 		    $[pluginName] = function ( options ) {
