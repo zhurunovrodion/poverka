@@ -21,11 +21,11 @@
 	    	}
 
 		    InputModal.prototype.init = function () {
-		        var $header = $('<div class="modal-header"></div>');
+		        var $header = $('<div class="modal-header"><h4>Редактирование записи</h4></div>');
 		        var $content = $('<div class="modal-content">');
-		        var $body = $('<div class="modal-body">');
+		        var $body = $('<div class="modal-body "></div>');
 		        var $footer = $('<div class="modal-footer">');
-		        var $form = $('<form id="modal-form">');		        
+		        var $form = $('<form  id="modal-form">');		        
 		        var $dialog = $('<div class="modal-dialog">');
 		        var $okButton = $('<button type="submit" class="btn btn-success">Сохранить</button>');
 	            var $cancelButton = $('<button class="btn btn-danger">Отмена</button>');
@@ -43,9 +43,9 @@
 
 				for(var i=0; i<this.fields.length; i++){
 					var field = this.fields[i];
-					var $inputContainer = $('<div>');
-					var $label = $('<label>').text(field.name); //set label text.
-					var $input = $('<input type="text">')
+					var $inputContainer = $('<div class="col-lg-12 ">');
+					var $label = $('<label class="col-lg-3">').text(field.name); //set label text.
+					var $input = $('<input class="col-lg-8" type="text">')
 									.attr('id', field.id)
 									.attr('name', field.id)
 									.val(field.value);

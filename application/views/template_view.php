@@ -1,4 +1,10 @@
-
+<?php
+$title="Главная";
+$current_http_query = explode('/', $_SERVER['REQUEST_URI']);
+if ($current_http_query[1]=="editlocations"){
+	$title="Внесение данных";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Система учета поверок</title>
+  <title><?php echo $title?></title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -52,7 +58,7 @@
     <content>
     <div class="panel panel-info">
   <div class="panel-heading">
-    <h1 class="panel-title" align="center">Название панели</h1>
+    <h1 class="panel-title" align="center"><?php echo $title?></h1>
   </div>
   <div class="panel-body">
      <div class="container-fluid " id="main_content_block">
