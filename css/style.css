@@ -687,6 +687,20 @@ select option{
 select option:hover{
   color:#FFBF51;
 }
+
+.tabs .nav-tabs .active span{
+  background-color: #0D8FDB;
+  position: relative;
+  margin-left: 4px;
+  
+}
+
+.tabs .nav-tabs  span{
+  background-color: #B8B8B8;
+  position: relative;
+  margin-left: 4px;
+  
+}
 /* Стили select начало конец */ 
 /*=====================content end========================================*/
 

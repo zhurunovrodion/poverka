@@ -40,6 +40,7 @@ class Model_Editlocations extends Model
 		$this->db->query($sql, $value, $id);
 		return $value; 
 	}
+	
 		
 }
 

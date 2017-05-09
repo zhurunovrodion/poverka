@@ -1,10 +1,19 @@
 <script type="text/javascript" src="js/editlocations_edit.js"></script>
+<?php
+
+$locations_count=$count[0];
+$posts_count=$count[1];
+$directions_count=$count[2];
+$device_list_count=$count[3];
+
+
+?>
 <div class="tabs">
 							<ul class="nav nav-tabs">
-								<li class="active"><a href="/editlocations">Внесение данных городов</a></li>
-								<li ><a href="/editposts">Внесение данных постов</a></li>
-								<li><a>Внесение данных направлений</a></li>
-								<li><a>Внесение данных Приборов</a></li>
+								<li class="active"><a href="/editlocations">Внесение данных городов<span class="badge"><?php echo $locations_count; ?></span></a></li>
+								<li ><a href="/editposts">Внесение данных постов<span class="badge"><?php echo $posts_count; ?></span></a></li>
+								<li><a>Внесение данных направлений<span class="badge"><?php echo $directions_count; ?></span></a></li>
+								<li><a>Внесение данных Приборов<span class="badge"><?php echo $device_list_count; ?></span></a></li>
 							</ul>
 						</div>
 
@@ -21,6 +30,7 @@
         
     </form>
 </div>
+
 <div id="editlocations_table">
 <?php
 

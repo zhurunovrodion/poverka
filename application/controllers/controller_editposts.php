@@ -9,7 +9,8 @@ class Controller_Editposts extends Controller
     function action_index()
     {
         $data = $this->model->get_data();
-        $this->view->generate('editposts_view.php', 'template_view.php', $data);
+        $count= $this->model->get_count_of_table_rows();
+        $this->view->generate('editposts_view.php', 'template_view.php', $data, $count);
     }
     function action_setdata()
     {

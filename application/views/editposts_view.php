@@ -1,18 +1,26 @@
 <script type="text/javascript" src="js/editposts_edit.js"></script>
+<?php
 
+$locations_count=$count[0];
+$posts_count=$count[1];
+$directions_count=$count[2];
+$device_list_count=$count[3];
+
+
+?>
 
 <div class="tabs">
 							<ul class="nav nav-tabs">
-								<li ><a href="/editlocations">Внесение данных городов</a></li>
-								<li class="active"><a href="/editposts">Внесение данных постов</a></li>
-								<li><a>Внесение данных направлений</a></li>
-								<li><a>Внесение данных Приборов</a></li>
+								<li ><a href="/editlocations">Внесение данных городов<span class="badge"><?php echo $locations_count; ?></span></a></li>
+								<li class="active"><a href="/editposts">Внесение данных постов<span class="badge"><?php echo $posts_count; ?></span></a></li>
+								<li><a>Внесение данных направлений<span class="badge"><?php echo $directions_count; ?></span></a></li>
+								<li><a>Внесение данных Приборов<span class="badge"><?php echo $device_list_count; ?></span></a></li>
 							</ul>
 						</div>
                      
 <div id="edit_form_editposts" class="clearfix">
     <form id="editpost_form"  action="/editposts/setdata" method="post">
-    	<h1>Введите данные поста для добавления</h1>
+    	<h2 align="center">Введите данные поста для добавления</h2>
     	<div id="edit_form_editposts_inputblock" >
     		<div class="edit_form_editposts_block_text_input">
     		<div class="select">
@@ -40,9 +48,12 @@
     </form>
 </div>
 
-
-
-<?php
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 align="center" class="panel-title">Вывод постов:</h3>
+  </div>
+  <div class="panel-body">
+    <?php
 global $i;
 $i=1;
 foreach ($data[0] as $locations) {
@@ -63,4 +74,8 @@ foreach ($data[0] as $locations) {
 	}
 	  echo '</ul>';
 	echo '</table>';
-}
+}?>
+  </div>
+</div>
+
+

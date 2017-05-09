@@ -1,7 +1,7 @@
 <?php
 $title="Главная";
 $current_http_query = explode('/', $_SERVER['REQUEST_URI']);
-if ($current_http_query[1]=="editlocations"){
+if ($current_http_query[1]=="editlocations" or $current_http_query[1]=="editposts"){
 	$title="Внесение данных";
 }
 ?>
