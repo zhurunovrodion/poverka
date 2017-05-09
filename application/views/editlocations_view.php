@@ -1,7 +1,12 @@
 <script type="text/javascript" src="js/editlocations_edit.js"></script>
-<div class="header-title">
-<h1>Добавление/редактирование населенного пункта</h1>
-</div>
+<div class="tabs">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="/editlocations">Внесение данных городов</a></li>
+								<li ><a href="/editposts">Внесение данных постов</a></li>
+								<li><a>Внесение данных направлений</a></li>
+								<li><a>Внесение данных Приборов</a></li>
+							</ul>
+						</div>
 
 
                      

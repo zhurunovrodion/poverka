@@ -1,77 +1,81 @@
 
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<title>Система поверок</title>
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-		<link href="http://fonts.googleapis.com/css?family=Kreon" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />		
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+<html lang="en">
 
-		<script type='text/javascript' src='js/validator/lib/jquery.js'></script>
-		<script type="text/javascript" src="js/jquery-ui-1.8.custom.min.js"></script>
-		<script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
-		<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Система учета поверок</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+ 
 
-		<script type="text/javascript" src="js/modal.js"></script>
-
-		
-	</head>
-	<body>
-	<div class="container-fluid">
-		<div id="wrapper">
-			<div id="header">
-				<div id="logo">
-					
-				</div>
-				<div id="menu">
-				
-					<ul>
-						<li class="first active"><a href="/">Главная</a></li>
-						<li><a href="/services">Ожидающие поверки</a></li>
-						<li><a href="#">Внесение данных</a>
-							 <ul class="submenu">
-            					<li><a href="/editlocations">Добавить город</a></li>
-            					<li><a href="/editposts">Добавить пост</a></li>
-            					<li><a href="#">Добавить направление</a></li>
-	            				<li><a href="#">Добавить прибор</a></li>
-	        				</ul>
-	        			</li>
-						<li class="last"><a href="/contacts">Информация</a></li>
-					</ul>
-					
-					<br class="clearfix" />
-				</div>
-			</div>
-			<div id="page">
-				<div id="content">
-					<div class="box">
-						<?php include 'application/views/'.$content_view; ?>
-						<!--
-						<h2>Welcome to Accumen</h2>
-						<img class="alignleft" src="images/pic01.jpg" width="200" height="180" alt="" />
-						<p>
-							This is <strong>Accumen</strong>, a free, fully standards-compliant CSS template by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. The images used in this template are from <a href="http://fotogrph.com/">Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the footer credits intact. Aside from that, have fun with it :)
-						</p>
-						-->
-					</div>
-					<br class="clearfix" />
-				</div>
-				<br class="clearfix" />
-			</div>
-			
-		</div>
-		<div id="footer">
-			<a href="/">Областное государственное казенное учреждение Челябинской области "Центр обработки вызовов системы 112-Безопасный регион"</a> &copy; 2017</a>
-		</div>
-		
-			
-		<script type='text/javascript' src='js/validator/dist/jquery.validate.js'></script>
+  <script type='text/javascript' src='js/validator/lib/jquery.js'></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.custom.min.js"></script>
+  <script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
+  <script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+ <script type='text/javascript' src='js/validator/dist/jquery.validate.js'></script>
 		<script type='text/javascript' src='js/form.validate.js'></script>
-	</div>	
-	</body>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <nav>
+        <div class="navbar navbar-default">
+          <div class="navbar-header col-lg-4">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu"> <span class="sr-only">Открыть навигацию</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#"> <img src="images/logo1.png"> </a>
+          </div>
+          <div class="collapse navbar-collapse col-lg-4 " id="responsive-menu">
+            <ul class=" nav navbar-nav">
+              <li class="active-link"><a href="http://localhost"><i class="glyphicon glyphicon-home "></i>Главная</a></li>
+              <li><a href="http://localhost/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge">14</span></a></li>
+              <li><a href="http://localhost/editlocations"><i class="glyphicon glyphicon-pencil"></i>Редактирование данных </a></li>
+              <li><a href="http://vk.com"><i class="glyphicon glyphicon-edit"></i>Информация</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <content>
+    <div class="panel panel-info">
+  <div class="panel-heading">
+    <h1 class="panel-title" align="center">Название панели</h1>
+  </div>
+  <div class="panel-body">
+     <div class="container-fluid " id="main_content_block">
+
+        <div class="container-fluid">
+        	<?php include 'application/views/'.$content_view; ?>
+        	
+        </div>
+      </div>
+  </div>
+</div>
+      
+
+
+    
+    </content>
+  
+  </div>
+  <footer>
+    <div class="container">
+      <p id="copyright">Областное государственное казенное учреждение Челябинской области "Центр обработки вызовов системы 112-Безопасный регион" © 2017 </p>
+    </div>
+  </footer>
+</body>
+
 </html>

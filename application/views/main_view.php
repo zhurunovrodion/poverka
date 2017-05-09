@@ -1,9 +1,4 @@
 
-<div class="header-title">
-<h1>Вывод Постов</h1>
-</div>
-<p>
-<div class="demo">
 
 <?php
 function doda($data){
@@ -32,8 +27,8 @@ function dodate($date, $yes){
 //print_r($data[4]);
 foreach ($data[1] as $locations) {
 	echo '<h1 align="center">'.$locations['location_name'].'</h1>';
-	echo '<table class="boxshadow">';
-	echo '<tr class="fixed-menu"><th>Запись</th><th>Номер поста</th><th>Наименование</th><th>Адрес поста</th></tr>';
+	echo '<table class="col-lg-12 col-md-12 col-xs-12">';
+	echo '<tr class="do-red"><th class="col-lg-1">Запись</th><th class="col-lg-1" >Номер поста</th><th class="col-lg-5">Наименование</th><th class="col-lg-5">Адрес поста</th></tr>';
 		foreach($data[0] as $posts){
 			foreach($data[2] as $location_post_consistency){
 				
@@ -54,7 +49,7 @@ foreach ($data[1] as $locations) {
 							echo $directions['direction_name'].' |<span class="bold">Количество полос: '.$directions['direction_stripe_count'].'</span><br>';
 							echo '</label>';
 							echo '<div>';
-							echo '<table class="cool">';
+							echo '<table class="cool table-bordered" >';
 							echo '<tr><th>Полоса</th><th>Наименование, тип СИ</th><th>Серийный номер</th><th>паспорт</th><th>Сертификат поверки</th><th>Идентификатор камеры для столбца "Серия и номер прибора" ПО "Ангел"</th><th>Идентификационный номер СИ</th><th>Номер по Государственному реестру СИ</th><th>Год выпуска СИ</th><th>класс точности, погрешность</th><th>предел (диапазон) измерений</th><th>Периодичность поверки, месяцев</th><th>Дата последней поверки</th><th>Сроки проведения поверки</th></tr>'; 
 							foreach ($data[4] as $pribors) {
 								if($pribors['stripe_owner_direction_id']==$directions['direction_id']){
