@@ -21,10 +21,11 @@ class Controller_Editlocations extends Controller
 	}
 	function action_deletelocation(){
 		try {
-		    if (!isset($_POST['id'])) {
+		    if (!isset($_POST['location_id'])) {
 		        throw new Exception('Не указан id записи');
 		    }
-		    $data=$_POST['id'];
+		    $data=$_POST['location_id'];
+		    
    		 
          $result=$this->model->delete_location($data);
 		 echo $result;   

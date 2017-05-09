@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/editlocations_edit.js"></script>
+<script type="text/javascript" src="js/editlocations_edit1.js"></script>
 <?php
 
 $locations_count=$count[0];
@@ -21,7 +21,7 @@ $device_list_count=$count[3];
                      
 <div id="edit_form_editlocations" class="clearfix">
     <form  action="/editlocations/setdata" method="post">
-        <h1>Введите город для добавления</h1>
+        <h2 align="center">Введите город для добавления</h2>
         
         <input id="edit_form_editlocations_inputs" type="text" name="location_name" placeholder="Введние название города/населенного пункта" autofocus required >   
         
@@ -30,21 +30,27 @@ $device_list_count=$count[3];
         
     </form>
 </div>
-
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 align="center" class="panel-title">Вывод городов:</h3>
+  </div>
+  <div class="panel-body">
 <div id="editlocations_table">
 <?php
 
 
 echo '<table class="table">';
-echo '<tr><th>№</th><th>Наименование</th></tr>';
-echo '<ul id="sortable">';
+echo '<tr><th>№</th><th>Наименование</th><th>Кнопки управления</th></tr>';
+
 foreach ($data[0] as $locations) {
-    echo '<tr id="' . $locations['location_id'] . '"><td>' . $locations['location_id'] . '</td>' . '<td><li id="note_' . $locations['location_id'] . '" class="editable"><span class="note" id="n_' . $locations['location_id'] . '">' . $locations['location_name'] . '</span><a href="#"><img src="../images/delete.png" alt="Удалить"></a></li></td></tr>';
+    echo '<tr data-id="'.$locations['location_id'].'"><td>'.$locations['location_id'].'</td><td class="col-lg-9">'.$locations['location_name'].'</td><td class="col-lg-2"><button class="edit-button btn btn-warning" data-toggle="modal" data-target="#myModal">Редактировать</button><span> </span><button class="remove-button btn btn-danger">Удалить</button></td></tr>';
     
 }
-echo '</ul>';
+
 echo '</table>';
 
 
 ?> 
+</div>
+  </div>
 </div>

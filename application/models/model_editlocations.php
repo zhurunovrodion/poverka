@@ -25,13 +25,12 @@ class Model_Editlocations extends Model
 	}
 	
 	public function delete_location($data){
-		$this->db=new SafeMySQL();
-		$data_id=substr($data, 5);
-		$sql="DELETE FROM locations WHERE location_id=?s";
-		$this->db->query($sql, $data_id);    
-		$result = array(); 
-		$result['id'] = $data_id;
-		return json_encode($result);
+		
+		$this->db = new SafeMySQL();
+        
+        $sql = "DELETE FROM locations WHERE location_id=?i";
+        $this->db->query($sql, $data);
+        echo "success";
 		
 	}
 	public function update_location($id, $value){
@@ -40,7 +39,7 @@ class Model_Editlocations extends Model
 		$this->db->query($sql, $value, $id);
 		return $value; 
 	}
-	
+
 		
 }
 

@@ -380,7 +380,7 @@ to { opacity: 1 }
     border-color: #d69e31 #e3a037 #d5982d #e3a037;
 
     
-    height: 46px;
+    height: 52px;
     padding: 0;
     width: 172px;
     cursor: pointer;
@@ -423,27 +423,14 @@ to { opacity: 1 }
   background-color: #FFAEA0;
 }
 
-#editlocations_table table li span.note {
-  float: left;
+
+#editlocations_table td{
+  text-align: center;
+  background-color: #D9EDF7;
 }
 
-#editlocations_table table li{
-  list-style-type:none;
-  background-color: #eeeeee;
-  border: solid 1px #aaaaaa;
-  padding: 0.5em;
-  margin: 0.2em;
-  clear: both;
-  overflow: hidden;
-  width:758px;
-  height: 38px;
-}
 
-#editlocations_table table li img{
-  border: none;
-  float:right;
-  display: inline;
-}
+
 
 #notfound {
   border: none;
