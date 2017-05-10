@@ -35,22 +35,22 @@ class Controller_Editlocations extends Controller
 		}
    	}
    	function action_updatelocation(){
-   		try {
-			//проверяем, пришли данные или нет
-			if (!isset($_POST['value'])
-					|| '' == $_POST['value']
-					|| !isset($_POST['id'])
-					|| '' == $_POST['id']) {
-				throw new Exception('Не указаны данные записи');
-			}
-			//подключаемся к базе
-			
-			$value = htmlspecialchars($_POST['value']);
-			$id=substr($_POST['id'], 2);
-			$note=$this->model->update_location($id, $value);
-			echo $note;			
-		} catch(Exception $e) {
-					echo 'Ошибка: '.$e->getMessage();
-				}
-   			}
+        try {
+            
+            $name    = $_POST['name'];
+           
+            $id      = $_POST['id'];	
+            if ( !isset($name) ) {
+                throw new Exception('Не указаны данные записи');
+            }
+            
+            
+            
+            $note = $this->model->update_location($id, $name);
+            echo "success";
+        }
+        catch (Exception $e) {
+            echo 'Ошибка: ' . $e->getMessage();
+        }
+    }
 }

@@ -57,9 +57,11 @@ $device_list_count=$count[3];
 global $i;
 $i=1;
 foreach ($data[0] as $locations) {
-
+	
+	
 	echo '<h1 align="center">'.$locations['location_name'].'</h1>';
-	echo '<table class="boxshadow col-lg-12 col-md-12 col-xs-12 ">';
+	
+	echo '<table class="tableposts col-lg-12 col-md-12 col-xs-12 ">';
 	echo '<ul id="sortable">';
 	echo '<tr class="fixed-menu do-red"><th class="col-lg-1">Запись</th><th class="col-lg-1">Номер поста</th><th class="col-lg-4">Наименование</th><th class="col-lg-4">Адрес поста</th><th class="col-lg-2">Кнопки управления</th></tr>';
 		
@@ -68,12 +70,13 @@ foreach ($data[0] as $locations) {
 			foreach($data[2] as $location_post_consistency){
 
 				if(($location_post_consistency['location_post_consistency_location_id']==$locations['location_id']) and ($location_post_consistency['location_post_consistency_post_id']==$posts['post_id']))
-					echo '<tr class="do-blue" data-id="'.$posts['post_id'].'" align="center"><td>'.$i++.'</td><td data-post-number="'.$posts['post_number'].'">'.$posts['post_number'].'</td><td data-post-name="'.$posts['post_name'].'">'.$posts['post_name'].'</td><td data-post-address="'.$posts['post_address'].'">'.$posts['post_address'].'</td><td><button class="edit-button btn btn-warning" data-toggle="modal" data-target="#myModal">Редактировать</button><span> </span><button class="remove-button btn btn-danger">Удалить</button></td></tr>';
+					echo '<tr class="do-blue" data-id="'.$posts['post_id'].'" align="center"><td>'.$i++.'</td><td data-post-number="'.$posts['post_number'].'">'.$posts['post_number'].'</td><td data-post-name="'.$posts['post_name'].'">'.$posts['post_name'].'</td><td data-post-address="'.$posts['post_address'].'">'.$posts['post_address'].'</td><td><button class="edit-button btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Редактировать</button><span> </span><button class="remove-button btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Удалить</button></td></tr>';
 					
 		}
 	}
 	  echo '</ul>';
 	echo '</table>';
+    
 }?>
   </div>
 </div>

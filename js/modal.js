@@ -27,8 +27,8 @@
 		        var $footer = $('<div class="modal-footer">');
 		        var $form = $('<form  id="modal-form">');		        
 		        var $dialog = $('<div class="modal-dialog">');
-		        var $okButton = $('<button type="submit" class="btn btn-success">Сохранить</button>');
-	            var $cancelButton = $('<button class="btn btn-danger">Отмена</button>');
+		        var $okButton = $('<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-floppy-saved"></span>Сохранить</button>');
+	            var $cancelButton = $('<button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Отмена</button>'); 
 
 	            this.$dialog = $dialog;
 

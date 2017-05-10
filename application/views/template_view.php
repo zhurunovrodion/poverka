@@ -1,24 +1,23 @@
 <?php
-$title="Главная";
+$title = "Главная";
 $current_http_query = explode('/', $_SERVER['REQUEST_URI']);
-if ($current_http_query[1]=="editlocations" or $current_http_query[1]=="editposts"){
-	$title="Внесение данных";
-}
+
+if ($current_http_query[1] == "editlocations" or $current_http_query[1] == "editposts")
+	{
+	$title = "Внесение данных";
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title><?php echo $title?></title>
-  <!-- Bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title><?php
+echo $title ?></title> 
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
- 
-
   <script type='text/javascript' src='js/validator/lib/jquery.js'></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.custom.min.js"></script>
   <script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
@@ -34,7 +33,6 @@ if ($current_http_query[1]=="editlocations" or $current_http_query[1]=="editpost
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
   <div class="container-fluid">
     <header>
@@ -58,24 +56,17 @@ if ($current_http_query[1]=="editlocations" or $current_http_query[1]=="editpost
     <content>
     <div class="panel panel-info">
   <div class="panel-heading">
-    <h1 class="panel-title" align="center"><?php echo $title?></h1>
+    <h1 class="panel-title" align="center"><?php echo $title ?></h1>
   </div>
   <div class="panel-body">
      <div class="container-fluid " id="main_content_block">
-
         <div class="container-fluid">
-        	<?php include 'application/views/'.$content_view; ?>
-        	
+        	<?php include 'application/views/' . $content_view; ?>        	
         </div>
       </div>
   </div>
-</div>
-      
-
-
-    
+</div>          
     </content>
-  
   </div>
   <footer>
     <div class="container">

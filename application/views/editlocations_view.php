@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/editlocations_edit1.js"></script>
+<script type="text/javascript" src="js/editlocations_edit.js"></script>
 <?php
 
 $locations_count=$count[0];
@@ -36,6 +36,7 @@ $device_list_count=$count[3];
   </div>
   <div class="panel-body">
 <div id="editlocations_table">
+
 <?php
 
 
@@ -43,7 +44,7 @@ echo '<table class="table">';
 echo '<tr><th>№</th><th>Наименование</th><th>Кнопки управления</th></tr>';
 
 foreach ($data[0] as $locations) {
-    echo '<tr data-id="'.$locations['location_id'].'"><td>'.$locations['location_id'].'</td><td class="col-lg-9">'.$locations['location_name'].'</td><td class="col-lg-2"><button class="edit-button btn btn-warning" data-toggle="modal" data-target="#myModal">Редактировать</button><span> </span><button class="remove-button btn btn-danger">Удалить</button></td></tr>';
+    echo '<tr data-id="'.$locations['location_id'].'" class="do-blue"><td>'.$locations['location_id'].'</td><td class="col-lg-9" data-location-name="'.$locations['location_name'].'">'.$locations['location_name'].'</td><td class="col-lg-2"><button class="edit-button btn btn-warning" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Редактировать</button><span> </span><button class="remove-button btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Удалить</button></td></tr>';
     
 }
 
