@@ -1,4 +1,11 @@
 <script type="text/javascript" src="js/editposts_edit.js"></script>
+<script type="text/javascript" src="js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript">
+	
+	$(function () {
+    $("table").stickyTableHeaders();
+});
+</script>
 <?php
 
 $locations_count=$count[0];
@@ -60,11 +67,12 @@ foreach ($data[0] as $locations) {
 	
 	
 	echo '<h1 align="center">'.$locations['location_name'].'</h1>';
-	
-	echo '<table class="tableposts col-lg-12 col-md-12 col-xs-12 ">';
+	echo '<div class="table-responsive">';
+	echo '<table class="tableposts col-lg-12 col-md-12 col-xs-12">';
 	echo '<ul id="sortable">';
-	echo '<tr class="fixed-menu do-red"><th class="col-lg-1">Запись</th><th class="col-lg-1">Номер поста</th><th class="col-lg-4">Наименование</th><th class="col-lg-4">Адрес поста</th><th class="col-lg-2">Кнопки управления</th></tr>';
-		
+	echo '<thead>';
+	echo '<tr class="do-red "  ><th class="col-lg-1">Запись</th><th class="col-lg-1">Номер поста</th><th class="col-lg-4">Наименование</th><th class="col-lg-4">Адрес поста</th><th class="col-lg-2">Кнопки управления</th></tr>';
+	echo '</thead>';	
 		foreach($data[1] as $posts){
 
 			foreach($data[2] as $location_post_consistency){
@@ -76,6 +84,7 @@ foreach ($data[0] as $locations) {
 	}
 	  echo '</ul>';
 	echo '</table>';
+	echo '</div';
     
 }?>
   </div>

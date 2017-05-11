@@ -1,4 +1,10 @@
-
+<script type="text/javascript" src="js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript">
+	
+	$(function () {
+    $("table").stickyTableHeaders();
+});
+</script>
 
 <?php
 function doda($data){
@@ -28,7 +34,9 @@ function dodate($date, $yes){
 foreach ($data[1] as $locations) {
 	echo '<h1 align="center">'.$locations['location_name'].'</h1>';
 	echo '<table class="col-lg-12 col-md-12 col-xs-12">';
+	echo '<thead>';
 	echo '<tr class="do-red"><th class="col-lg-1">Запись</th><th class="col-lg-1" >Номер поста</th><th class="col-lg-5">Наименование</th><th class="col-lg-5">Адрес поста</th></tr>';
+	echo '</thead>';
 		foreach($data[0] as $posts){
 			foreach($data[2] as $location_post_consistency){
 				

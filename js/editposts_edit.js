@@ -76,17 +76,17 @@ $(document).ready(function(){
 				fields: [{
 					id: 'number',
 					value: number,
-					name: 'Номер'
+					name: 'Номер поста'
 				},
 				{
 					id: 'name',
 					value: name,
-					name: 'Имя поста'
+					name: 'Наименование'
 				},
 				{
 					id: 'address',
 					value: address,
-					name: 'Адресс'
+					name: 'Адрес поста'
 				}],
 				windowClass: 'edit-posts-modal',
 				validator: validator,

@@ -45,7 +45,7 @@ echo $title ?></title>
           <div class="collapse navbar-collapse col-lg-4 " id="responsive-menu">
             <ul class=" nav navbar-nav">
               <li class="active-link"><a href="http://localhost"><i class="glyphicon glyphicon-home "></i>Главная</a></li>
-              <li><a href="http://localhost/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge">14</span></a></li>
+              <li><a href="http://localhost/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge"><span class="glyphicon glyphicon-bell"></span>14</span></a></li>
               <li><a href="http://localhost/editlocations"><i class="glyphicon glyphicon-pencil"></i>Редактирование данных </a></li>
               <li><a href="http://vk.com"><i class="glyphicon glyphicon-edit"></i>Информация</a></li>
             </ul>

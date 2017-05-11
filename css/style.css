@@ -59,6 +59,10 @@ body .container-fluid{
 
 
 /*=====================navigation-top-menu begin========================================*/
+
+.badge .glyphicon{
+  color: #ffffff;
+}
 .navbar-brand{
   
   height:auto;
@@ -255,7 +259,7 @@ to { opacity: 1 }
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  width: 546px;
+  width: 600px;
 }
 
 .modal-dialog.in .modal-body{
@@ -267,7 +271,6 @@ to { opacity: 1 }
 table .glyphicon {
   color:#ffffff;
 }
-
 
 .modal-dialog.in .modal-body form div{
   margin-bottom: 5px;

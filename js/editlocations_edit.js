@@ -66,7 +66,7 @@ $(document).ready(function(){
 				{
 					id: 'name',
 					value: name,
-					name: 'Название города'
+					name: 'Наименование'
 				}],
 				windowClass: 'edit-posts-modal',
 				validator: validator,
