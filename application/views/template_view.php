@@ -55,7 +55,7 @@ echo $title ?></title>
               <li <?php echo $main_active; ?>  ><a href="http://localhost"><i class="glyphicon glyphicon-home "></i>Главная</a></li>
               <li <?php echo $waiting_active; ?> > <a href="http://localhost/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge"><span class="glyphicon glyphicon-bell"></span>14</span></a></li>
               <li <?php echo $editdata_active; ?> ><a href="http://localhost/editlocations"><i class="glyphicon glyphicon-pencil"></i>Редактирование данных </a></li>
-              <li <?php echo $main_active; ?> ><a href="http://vk.com"><i class="glyphicon glyphicon-edit"></i>Информация</a></li>
+              <li <?php echo $info_active; ?> ><a href="http://vk.com"><i class="glyphicon glyphicon-edit"></i>Информация</a></li>
             </ul>
           </div>
         </div>

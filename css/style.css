@@ -272,8 +272,8 @@ table .glyphicon {
   color:#ffffff;
 }
 
-.modal-dialog.in .modal-body form div{
-  margin-bottom: 5px;
+.modal-dialog.in .modal-body form div input{
+  margin-bottom: 10px;
 }
 .modal-dialog.in .modal-body form div .error{
  color: #E14747;
