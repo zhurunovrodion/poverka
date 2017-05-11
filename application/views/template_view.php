@@ -26,6 +26,7 @@ if ($current_http_query[1] == "")
 echo $title ?></title> 
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+   <link href="css/nprogress.css" rel="stylesheet">
   <script type='text/javascript' src='js/validator/lib/jquery.js'></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.custom.min.js"></script>
   <script type="text/javascript" src="js/jquery.jeditable.mini.js"></script>
@@ -34,6 +35,13 @@ echo $title ?></title>
 		<script type='text/javascript' src='js/form.validate.js'></script>
   <script src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/modal.js"></script>
+  <script type="text/javascript" src="js/nprogress.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+		NProgress.start();
+
+  	});
+  </script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -81,6 +89,12 @@ echo $title ?></title>
       <p id="copyright">Областное государственное казенное учреждение Челябинской области "Центр обработки вызовов системы 112-Безопасный регион" © 2017 </p>
     </div>
   </footer>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+		NProgress.done();
+
+  	});
+  </script>
 </body>
 
 </html>
