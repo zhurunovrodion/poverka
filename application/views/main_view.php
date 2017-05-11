@@ -42,7 +42,7 @@ foreach ($data[1] as $locations) {
 				
 				if(($location_post_consistency['location_post_consistency_location_id']==$locations['location_id']) and ($location_post_consistency['location_post_consistency_post_id']==$posts['post_id']))
 				{
-			
+				
 				echo '<tr class="do-blue" align="center"><td>'.$posts['post_id'].'</td><td>'.$posts['post_number'].'</td><td>'.$posts['post_name'].'</td><td>'.$posts['post_address'].'</td></tr>';
 					
 					echo '<tr><td colspan=\'4\'>';
