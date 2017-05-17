@@ -2,7 +2,7 @@
 $title = "Главная";
 $current_http_query = explode('/', $_SERVER['REQUEST_URI']);
 
-if ($current_http_query[1] == "editlocations" or $current_http_query[1] == "editposts")
+if ($current_http_query[1] == "editlocations" or $current_http_query[1] == "editposts" or $current_http_query[1] == "editdirections")
 	{
 	$title = "Внесение данных";
 	$editdata_active='class="active-link"';
@@ -60,9 +60,9 @@ echo $title ?></title>
           </div>
           <div class="collapse navbar-collapse col-lg-4 " id="responsive-menu">
             <ul class=" nav navbar-nav">
-              <li <?php echo $main_active; ?>  ><a href="http://localhost"><i class="glyphicon glyphicon-home "></i>Главная</a></li>
-              <li <?php echo $waiting_active; ?> > <a href="http://localhost/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge"><span class="glyphicon glyphicon-bell"></span>14</span></a></li>
-              <li <?php echo $editdata_active; ?> ><a href="http://localhost/editlocations"><i class="glyphicon glyphicon-pencil"></i>Редактирование данных </a></li>
+              <li <?php echo $main_active; ?>  ><a href="/"><i class="glyphicon glyphicon-home "></i>Главная</a></li>
+              <li <?php echo $waiting_active; ?> > <a href="/waiting"><i class="glyphicon glyphicon-time"></i>Оживающие поверки <span class="badge"><span class="glyphicon glyphicon-bell"></span>14</span></a></li>
+              <li <?php echo $editdata_active; ?> ><a href="/editlocations"><i class="glyphicon glyphicon-pencil"></i>Редактирование данных </a></li>
               <li <?php echo $info_active; ?> ><a href="http://vk.com"><i class="glyphicon glyphicon-edit"></i>Информация</a></li>
             </ul>
           </div>
@@ -95,6 +95,7 @@ echo $title ?></title>
 
   	});
   </script>
+  
 </body>
 
 </html>
